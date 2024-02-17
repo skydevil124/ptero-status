@@ -1,0 +1,87 @@
+# PteroStats config
+# If you need help, join our discord server here: https://discord.gg/zv6maQRah3
+
+# Bot Configuration
+token: 'process.env.bot_token'
+presence:
+    text: 'Skydevil Hosting'
+    type: 'streaming' # can be 'watching', 'playing', 'listening', or 'competing'. for 'streaming' is not working for now
+    status: 'dnd' # can be 'online', 'idle', 'dnd', or 'invisible'
+
+# Discord Channel and Refresh Time Configuration
+channel: '1193576558837899274'
+refresh: 10 # How much time the bot will refresh the stats
+timeout: 1 # How much time to wait some node to respond to the bot (if you change this, it will add more time to refresh the stats)
+
+# Panel Configuration
+panel:
+    url: 'https://special-space-trout-pjjqjjx9qwwv35pw-80.app.github.dev/'
+    key: 'process.env.pteroapi'
+
+# Message and Embed Configuration
+# leave '' if you want to disable option
+message:
+    content: '**Skydevil Hosting** Is Best hosting for ur bot. free and paid 24/7 hosting.'
+    attachment: '' # If you enable attachment on message it upload the attachment first before sending or editing message and it will delay the stats
+
+embed:
+    title: 'Skydevil Hosting'
+    color: '000000'
+    description: 'Next update {{time}}' # You can use {{time}} to make "in X seconds" time format
+    footer: 'Powered by RedSky Realm studios'
+    timestamp: true
+    thumbnail: 'https://media.discordapp.net/attachments/1193413488786292887/1207247596087812146/517f5b9f-ee70-49ee-8b88-9818a4cf7371.jpg?'
+    image: ''
+    field:
+        title: ''
+        description: '' # You can use {{time}} to make "in X seconds" time format
+
+# Message Button Configuration
+button:
+    enable: true
+    btn1:
+        label: 'Panel'
+        url: 'https://gnat-inspired-hugely.ngrok-free.app/'
+    btn2:
+        label: ''
+        url: ''
+    btn3:
+        label: ''
+        url: ''
+    btn4:
+        label: ''
+        url: ''
+    btn5:
+        label: ''
+        url: ''
+
+# Status Message Configuration
+# How to use custom emoji: https://github.com/HirziDevs/PteroStats#using-custom-emoji
+status:
+    online: '<a:online:1207231682906820628> Online'
+    offline: '<a:offline:1207231817053376512> Offline<:Sad:1207232434480087070>'
+
+# Nodes Settings
+# How to get nodes id: https://github.com/HirziDevs/PteroStats#blacklist-nodes
+nodes_settings:
+    blacklist: [1] # You can add node id to remove the node from status embed (Example: "blacklist: [1]")
+    details: true # enable nodes details like memory and disk
+    servers: true
+    location: true
+    allocations: true
+    unit: 'mb' # You can use "gb", "mb", "tb", or "percent"
+
+# Panel Users and Servers Settings
+panel_settings:
+    status: true # enable panel stats under nodes stats
+    servers: true
+    users: true
+
+# Mentions a User or Role if some nodes are offline (this feature is still in testing, please report if you have a problem)
+mentions: # to enable atleast put 1 ID on user or role bellow
+    user: [] # Put User ID here (Example: "user: ['548867757517570058', '816219634390663230']")
+    role: ['1207233166562304020'] # Put Role ID here (Example: "role: ['796083838236622858', '858198863973187585']")
+    channel: '1194983256769167401' # Put Channel ID here for the logging
+
+# Log error to console if server offline (enable this if you have a problem that you wanted to report)
+log_error: true # set to "true" to enable
